@@ -1,0 +1,39 @@
+
+.faq {
+  &__block {
+    border-radius: 20px;
+    border: 1px solid $stroke;
+    background: $BG-light-grey;
+    @include sm-block() {
+      border-radius: 0;
+    }
+    &-info {
+      padding: 30px;
+      @include sm-block() {
+        padding: 16px;
+      }
+    }
+
+    ol {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      @include sm-block() {
+        font-size: 16px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    margin: 30px auto;
+  }
+}

@@ -1,0 +1,230 @@
+.header {
+  position: sticky;
+  top: -112px;
+  z-index: 99;
+  @include sm-block() {
+    top: 0;
+  }
+
+  &__top {
+    background: #fff;
+    &-logo {
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      img {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+        @include sm-block() {
+          height: 60px;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &-contact {
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        span {
+          color: $gray;
+
+          &.active {
+            color: $green;
+            font-weight: 700;
+          }
+        }
+
+        .line {
+          width: 1px;
+          height: 16px;
+          background: $gray;
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 30px;
+      border-radius: 26px;
+      border: 1px solid $green;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      .text {
+        color: $green;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        transition: color 0.3s ease-in-out;
+
+        span {
+          color: $green;
+          font-size: 16px;
+          font-weight: 700;
+          display: block;
+          line-height: 1;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 14px;
+      }
+      &:hover {
+        background-color: $green;
+    
+        .text {
+          color: $primary;
+    
+          span {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    &-left {
+      gap: 40px;
+    }
+
+    &-phone {
+      text-align: right;
+
+      a {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      span {
+        cursor: pointer;
+        color: $green;
+        font-size: 14px;
+        line-height: 1;
+        border-bottom: 1px dashed $green;
+      }
+    }
+
+    &-icon {
+      position: relative;
+      cursor: pointer;
+
+      span {
+        font-size: 12px;
+        font-weight: 600;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: $green;
+        top: -14px;
+        right: -14px;
+        position: absolute;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__menu {
+    background: $green;
+    position: relative;
+    &-serch {
+      background: #62a53c;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -500px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      padding: 0px 36px;
+      @include sm-block() {
+        position: relative;
+      }
+      label {
+        display: flex;
+        align-items: center;
+
+        input {
+          height: 100%;
+          width: 100%;
+          border-radius: 0;
+          border: none;
+          background: none;
+          color: #fff;
+        }
+      }
+    }
+
+    .col-1 {
+      position: relative;
+    }
+
+    nav {
+      grid-column-start: 2;
+
+      a {
+        padding: 0px 28px;
+        border-left: 1px solid $gray;
+        border-right: 1px solid $gray;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+        @include sm-block() {
+          border: none;
+          margin: 16px 0;
+          font-weight: 700;
+        }
+        &:nth-child(1) {
+          border-left: none;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.header__top-icon {
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  span {
+    top: -8px;
+    right: -8px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+

@@ -1,0 +1,25 @@
+@mixin font($fontName, $fontStyle, $fontWeight, $fontUrlWoff2, $fontUrlWoff) {
+  @font-face {
+    font-family: $fontName;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    src: url($fontUrlWoff2) format("woff2"), url($fontUrlWoff) format("woff");
+  }
+}
+
+@include font("proximanova", normal, 400, "../fonts/proximanova_regular.woff2",  "../fonts/proximanova_regular.woff");
+@include font("proximanova", bold, 700, "../fonts/proximanova_bold.woff2",  "../fonts/proximanova_bold.woff");
+
+
+
+
+// font-weight helper
+// 100 - Extra Light or Ultra Light
+// 200 - Light or Thin
+// 300 - Book or Demi
+// 400 - Regular or Normal
+// 500 - Medium
+// 600 - Semibold or Demibold
+// 700 - Bold
+// 800 - Black or Extra Bold or Heavy
+// 900 - Extra Black or Fat or Ultra Blac

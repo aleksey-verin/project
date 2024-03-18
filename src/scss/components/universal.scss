@@ -1,0 +1,135 @@
+
+.modal {
+  form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+
+      a {
+        display: inline;
+        color: $green;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#ModalImg {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 30px 0;
+  @include sm-block() {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  @include sm-block() {
+    font-size: 24px;
+  }
+}
+
+.container {
+  max-width: 1170px;
+}
+
+section {
+  margin: 60px 0;
+}
+
+button {
+  padding: 10px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 35px;
+  background: var(--Gradient, linear-gradient(90deg, #6cb644 0%, #82ca2c 100%));
+  box-shadow: 0px 10px 20px 0px rgba(132, 199, 55, 0.3);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+  }
+  &.icon {
+    padding-left: 30px;
+  }
+  &.navbar-toggler {
+    background: none;
+    box-shadow: none;
+  }
+  &:hover {
+    box-shadow: 0px 10px 20px 0px rgba(132, 199, 55, 0.5);
+  }
+}
+.gray {
+  color: $gray;
+}
+li {
+  font-size: 18px;
+  color: $gray-primary;
+  line-height: 30px;
+  @include sm-block() {
+    font-size: 16px;
+  }
+}
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+input {
+  padding: 15px 30px;
+  font-weight: 600;
+  color: $gray-primary;
+  border-radius: 26px;
+  border: 1px solid $green;
+  outline: none;
+  &::placeholder {
+    color: $gray-primary;
+  }
+}
+a {
+  color: $primary;
+  text-decoration: none;
+  display: block;
+}
+.ModalImg {
+  cursor: zoom-in;
+}
+

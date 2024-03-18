@@ -1,0 +1,55 @@
+.banner {
+  background: $BG-light-grey;
+  margin-top: 0;
+
+  &__breadcrumbs {
+    margin: 20px 0;
+    gap: 8px;
+    color: $gray;
+  }
+
+  h1 {
+    span {
+      color: $green;
+    }
+  }
+
+  &__info {
+    &-text {
+      margin: 30px 0;
+      margin-top: 60px;
+      @include sm-block() {
+        margin-top: 30px;
+      }
+      p {
+        font-style: italic;
+
+        span {
+          font-style: normal;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    @include sm-block() {
+      margin-top: 30px;
+    }
+  }
+
+  button {
+    font-size: 14px;
+    background: #fff;
+    font-weight: 600;
+    color: $gray-primary;
+    padding: 15px 30px;
+    border: 1px solid $green;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
